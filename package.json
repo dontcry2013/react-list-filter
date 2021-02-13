@@ -1,5 +1,5 @@
 {
-  "name": "react-table",
+  "name": "react-list-filter",
   "version": "1.0.0",
   "description": "",
   "keywords": [
@@ -7,7 +7,7 @@
     "redux",
     "redux-thunk"
   ],
-  "homepage": "https://dontcry2013.github.io/react-table",
+  "homepage": "https://dontcry2013.github.io/react-list-filter",
   "main": "src/index.js",
   "dependencies": {
     "antd": "4.3.5",
