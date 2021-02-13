@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Divider, Input, Select, Space } from 'antd';
+import {
+  Divider, Input, Select, Space
+} from 'antd';
 import { URL_PET_MEL, URL_PET_SYD } from '../Constants';
 import { useFetch } from '../hooks/useFetch';
 import PetTable from './PetTable';
@@ -18,18 +20,18 @@ export default () => {
 
   useEffect(() => {
     if (melData && melData.data) {
-      let malePets = [];
-      let femalePets = [];
+      const malePets = [];
+      const femalePets = [];
       melData.data.forEach(item => {
         const user = { ...item, city: 'Melbourne' };
         delete user.pets;
         if (user.gender === 'Male') {
           item.pets && item.pets.forEach((pet) => {
-            malePets.push({...user, petName: pet.name, petType: pet.type})
+            malePets.push({ ...user, petName: pet.name, petType: pet.type })
           })
         } else {
           item.pets && item.pets.forEach((pet) => {
-            femalePets.push({...user, petName: pet.name, petType: pet.type})
+            femalePets.push({ ...user, petName: pet.name, petType: pet.type })
           })
         }
       })
@@ -40,18 +42,18 @@ export default () => {
 
   useEffect(() => {
     if (sydData && sydData.data) {
-      let malePets = [];
-      let femalePets = [];
+      const malePets = [];
+      const femalePets = [];
       sydData.data.forEach(item => {
         const user = { ...item, city: 'Sydney' };
         delete user.pets;
         if (user.gender === 'Male') {
           item.pets && item.pets.forEach((pet) => {
-            malePets.push({...user, petName: pet.name, petType: pet.type})
+            malePets.push({ ...user, petName: pet.name, petType: pet.type })
           })
         } else {
           item.pets && item.pets.forEach((pet) => {
-            femalePets.push({...user, petName: pet.name, petType: pet.type})
+            femalePets.push({ ...user, petName: pet.name, petType: pet.type })
           })
         }
       })
@@ -73,8 +75,8 @@ export default () => {
         <Search
           onChange={(e) => {
             console.log(e.target.value);
-            setSearchVal([e.target.value])}
-          }
+            setSearchVal([e.target.value]);
+          }}
           placeholder="Search"
           enterButton
           style={{
@@ -86,7 +88,7 @@ export default () => {
           style={{ width: 200 }}
           placeholder="Select a city"
           onChange={(value) => {
-            setFilteredInfoData({ ...filteredInfo, city: [value] || null});
+            setFilteredInfoData({ ...filteredInfo, city: [value] || null });
           }}
         >
           <Option value=""></Option>

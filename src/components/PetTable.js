@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Table } from 'antd';
 
-export default ({loading, searchVal, filteredInfo, maleState}) => {
-  console.log(filteredInfo)
+export default ({
+  loading, searchVal, filteredInfo, maleState,
+}) => {
   const [colFilters, setColFilters] = useState(filteredInfo);
 
   useEffect(() => {
@@ -46,7 +47,6 @@ export default ({loading, searchVal, filteredInfo, maleState}) => {
   ];
 
   const handleMaleTableChange = (filters) => {
-    console.log('handleMaleTableChange', filters);
     setColFilters(filters)
   };
 
