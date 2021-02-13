@@ -7,7 +7,7 @@
     "redux",
     "redux-thunk"
   ],
-  "homepage": "https://dontcry2013.github.io/react-list-filter",
+  "homepage": "https://dontcry2013.github.io/react-list-filter/",
   "main": "src/index.js",
   "dependencies": {
     "antd": "4.3.5",
